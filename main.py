@@ -94,8 +94,6 @@ async def parse_upwork_job(
     loc_el = soup.select_one('li[data-cy="local"] strong')
     location_type = loc_el.get_text(strip=True) if loc_el else None
 
-    # 6) Skills (all badges under “Skills and Expertise”)
-    # 6) Skills (from 'Skills and Expertise' section using data-test)
     skills: Set[str] = set()
     skills_section = soup.select_one('section[data-test="skills-section"]')
     if skills_section:
