@@ -108,10 +108,6 @@ async def parse_upwork_job(
 
     return title, budget, skills, experience, project_type, location_type, posted
 
-
-
-
-
 # ─── USER PREF HELPERS ───────────────────────────────────────────────────────
 
 async def get_user_preferences(user_id: int) -> Optional[UserPreferences]:
